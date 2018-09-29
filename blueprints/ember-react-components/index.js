@@ -6,9 +6,6 @@ module.exports = {
   normalizeEntityName() {},
 
   afterInstall() {
-    return Promise.all([
-      this.addPackagesToProject([{ name: 'react' }, { name: 'react-dom' }]),
-      this.addAddonToProject('@ember-decorators/babel-transforms')
-    ]);
+    return this.addAddonToProject('@ember-decorators/babel-transforms');
   }
 };
